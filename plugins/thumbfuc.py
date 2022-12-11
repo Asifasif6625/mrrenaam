@@ -20,5 +20,5 @@ async def removethumb(client, message):
 async def addthumbs(client, message):
     mkn = await message.reply_text("Please Wait ...")
     await db.set_thumbnail(message.from_user.id, file_id=message.photo.file_id)                
-    await mkn.edit("✅️ __**𝚈𝙾𝚄𝚁 𝚃𝙷𝚄𝙼𝙱𝙽𝙰𝙸𝙻 𝚂𝚄𝙲𝙲𝙴𝚂𝚂𝚂𝙵𝚄𝙻𝙻𝚈 𝚂𝙰𝚅𝙴𝙳**__")
+    await mkn.edit("✅️ __**തന്ന thumbnail സേവ് ആകിയിട്ടുണ്ട്..**__")
 	
