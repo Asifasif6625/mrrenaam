@@ -9,12 +9,12 @@ async def viewthumb(client, message):
 	   chat_id=message.chat.id, 
 	   photo=thumb)
     else:
-        await message.reply_text("😔 __**𝚈𝙾𝚄 𝙳𝙾𝙽𝚃 𝙷𝙰𝚅𝙴 𝙰𝙽𝚈 𝚃𝙷𝚄𝙼𝙱𝙽𝙰𝙸𝙻**__") 
+        await message.reply_text("😔 __**നിങ്ങൾ ഒരു ക്യാപ്ഷനും തന്നിട്ടില്ല..**__") 
 		
 @Client.on_message(filters.private & filters.command(['delthumb']))
 async def removethumb(client, message):
     await db.set_thumbnail(message.from_user.id, file_id=None)
-    await message.reply_text("❌️ __**𝚈𝙾𝚄𝚁 𝚃𝙷𝚄𝙼𝙱𝙽𝙰𝙸𝙻 𝚂𝚄𝙲𝙲𝙴𝚂𝚂𝙵𝚄𝙻𝙻𝚈 𝙳𝙴𝙻𝙴𝚃𝙴𝙳**__")
+    await message.reply_text("❌️ __**തന്ന thumbnail ഡിലീറ്റ് ആകിയിട്ടുണ്ട്..**__")
 	
 @Client.on_message(filters.private & filters.photo)
 async def addthumbs(client, message):
